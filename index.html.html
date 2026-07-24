@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hamster Task</title>        
+        <link rel="icon" type="image/png" href="logo.png">
+        <link rel="stylesheet" href="hamster.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <section class="task-container">
+            <div class="hamster-intro">
+                <h1 class="title">HamsterDo</h1>
+                <p class="desc">keep your hamster happy — finish your tasks</p>
+            </div>
+
+            <div class="hamster-screen">
+                <img src="" alt="" id="hamster-king">
+                <div class="hamster-text">
+                    <p id="hamster-name"></p>
+                    <p id="hamster-stage"></p>
+                    <div class="xp-bar-wrap">
+                        <div class="xp-bar" id="xp-bar"></div>
+                    </div>
+                    <p id="xpt"></p>
+                </div>
+            </div>
+
+            <div class="task-row">
+                <div class="streak">
+                    <p class="stat-num" id="streak-num">0</p>
+                    <p class="stat-p">🔥Day streak</p>
+                </div>
+
+                <div class="completed">
+                    <p class="stat-num" id="complete-num">0</p>
+                    <p class="stat-p">✅ Done today</p>
+                </div>
+
+                <div class="pending">
+                    <p class="stat-num" id="pending-num">0</p>
+                    <p class="stat-p">⏳ Pending</p>
+                </div>
+            </div>
+
+            
+            <form class="form-layer">
+                <input type="text" id="task-input" placeholder="Enter task for the day... 🐹" required>
+                <button type="button" onclick="addtask()">+ Add</button>
+            </form>
+            <div class="task-table">
+                <div class="task-header">
+                    <span>Today's tasks</span>
+                    <button id="clear-done">Clear done</button>
+                </div>
+                <ul id="task-list"></ul>
+                <div class="empty-state" id="empty-state">
+                    🌱 No tasks yet — add one above!
+                </div>
+            </div>
+        </section>
+
+        <script src="hamster.js"></script>
+    </body>
+</html>
